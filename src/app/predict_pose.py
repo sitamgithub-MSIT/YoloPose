@@ -24,6 +24,7 @@ def predict_pose(
         - img (str or numpy.ndarray): The input image or path to the image file.
         - conf_threshold (float): The confidence threshold for object detection.
         - iou_threshold (float): The Intersection Over Union (IOU) threshold for non-max suppression.
+        - max_detections (int): The maximum number of detections allowed.
         - model_name (str): The name or path of the YOLOv8 model to be used for prediction.
 
     Returns:
