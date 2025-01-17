@@ -1,6 +1,6 @@
 Pillow
 torch==2.4.0
 torchvision==0.19.0
-ultralytics==8.3.36
+ultralytics
 spaces
 gradio

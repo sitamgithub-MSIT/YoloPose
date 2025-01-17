@@ -3,7 +3,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import gradio as gr
-from src.app.predict_pose import predict_pose
+from src.yolo.predict_pose import predict_pose
 
 
 # Image and input parameters
@@ -58,7 +58,7 @@ interface = gr.Interface(
     title=title,
     description=description,
     article=article,
-    theme="Nymbo/Nymbo_Theme",
+    theme="Base",
     flagging_mode="never",
 )
 interface.launch(debug=False)
