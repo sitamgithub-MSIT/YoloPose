@@ -21,9 +21,6 @@ model_name = gr.Radio(
     choices=[
         "yolo11n-pose.pt",
         "yolo11s-pose.pt",
-        "yolo11m-pose.pt",
-        "yolo11l-pose.pt",
-        "yolo11x-pose.pt",
     ],
     label="Model name",
     value="yolo11n-pose.pt",
@@ -36,9 +33,6 @@ pose_image = gr.Image(type="pil", label="Output Image")
 examples = [
     ["images/posing-sample-image3.jpg", 0.25, 0.45, 300, "yolo11n-pose.pt"],
     ["images/posing-sample-image4.jpg", 0.25, 0.45, 300, "yolo11s-pose.pt"],
-    ["images/posing-sample-image5.jpg", 0.25, 0.45, 300, "yolo11m-pose.pt"],
-    ["images/posing-sample-image1.jpg", 0.25, 0.45, 300, "yolo11l-pose.pt"],
-    ["images/posing-sample-image2.png", 0.25, 0.45, 300, "yolo11x-pose.pt"],
 ]
 
 # Title, description, and article for the interface

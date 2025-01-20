@@ -2,14 +2,12 @@ import sys
 import PIL.Image as Image
 from ultralytics import YOLO
 import gradio as gr
-import spaces
 
 # Local imports
 from src.logger import logging
 from src.exception import CustomExceptionHandling
 
 
-@spaces.GPU
 def predict_pose(
     img: str,
     conf_threshold: float,
@@ -18,14 +16,14 @@ def predict_pose(
     model_name: str,
 ) -> Image.Image:
     """
-    Predicts objects in an image using a YOLOv8 model with adjustable confidence and IOU thresholds.
+    Predicts objects in an image using a YOLO11 model with adjustable confidence and IOU thresholds.
 
     Args:
         - img (str or numpy.ndarray): The input image or path to the image file.
         - conf_threshold (float): The confidence threshold for object detection.
         - iou_threshold (float): The Intersection Over Union (IOU) threshold for non-max suppression.
         - max_detections (int): The maximum number of detections allowed.
-        - model_name (str): The name or path of the YOLOv8 model to be used for prediction.
+        - model_name (str): The name or path of the YOLO11 model to be used for prediction.
 
     Returns:
         PIL.Image.Image: The image with predicted objects plotted on it.
@@ -48,7 +46,7 @@ def predict_pose(
             show_conf=True,
             imgsz=640,
             half=True,
-            device="cuda:0",
+            device="cpu",
         )
 
         # Plot the predicted objects on the image
