@@ -16,14 +16,14 @@ def predict_pose(
     model_name: str,
 ) -> Image.Image:
     """
-    Predicts objects in an image using a YOLO11 model with adjustable confidence and IOU thresholds.
+    Predicts objects in an image using a YOLO model with adjustable confidence and IOU thresholds.
 
     Args:
         - img (str or numpy.ndarray): The input image or path to the image file.
         - conf_threshold (float): The confidence threshold for object detection.
         - iou_threshold (float): The Intersection Over Union (IOU) threshold for non-max suppression.
         - max_detections (int): The maximum number of detections allowed.
-        - model_name (str): The name or path of the YOLO11 model to be used for prediction.
+        - model_name (str): The name or path of the YOLO model to be used for prediction.
 
     Returns:
         PIL.Image.Image: The image with predicted objects plotted on it.

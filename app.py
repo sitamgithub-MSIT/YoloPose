@@ -33,12 +33,14 @@ pose_image = gr.Image(type="pil", label="Output Image")
 examples = [
     ["images/posing-sample-image3.jpg", 0.25, 0.45, 300, "yolo11n-pose.pt"],
     ["images/posing-sample-image4.jpg", 0.25, 0.45, 300, "yolo11s-pose.pt"],
+    ["images/posing-sample-image1.jpg", 0.25, 0.45, 300, "yolo11n-pose.pt"],
+    ["images/posing-sample-image2.png", 0.25, 0.45, 300, "yolo11s-pose.pt"],
 ]
 
 # Title, description, and article for the interface
-title = "YOLO11 Pose Estimation"
-description = "Gradio Demo for the YOLO11 Pose Estimation model. This model can detect and predict the poses of people in images. To use it, upload your image, select associated parameters, or use the default values, click 'Submit', or click one of the examples to load them. You can read more at the links below."
-article = "<p style='text-align: center'><a href='https://github.com/ultralytics/ultralytics' target='_blank'>Ultralytics GitHub</a> | <a href='https://docs.ultralytics.com/models/yolo11/' target='_blank'>Model Page</a></p>"
+title = "YOLO Pose Estimation"
+description = "Gradio Demo for the YOLO Pose Estimation model. This model can detect and predict the poses of people in images. To use it, upload your image, select associated parameters, or use the default values, click 'Submit', or click one of the examples to load them. You can read more at the links below."
+article = "<p style='text-align: center'><a href='https://github.com/ultralytics/ultralytics' target='_blank'>Ultralytics GitHub</a> | <a href='https://docs.ultralytics.com/models/' target='_blank'>Models Page</a></p>"
 
 
 # Launch the interface
